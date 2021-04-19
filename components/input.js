@@ -5,11 +5,14 @@ width: 200px;
 height: 55px;
 border: ${props => props.default ? "1px solid #828282": undefined };
 border: ${props => props.error ? "1px solid #D32F2F": undefined };
-border: ${props => props.disabled ? "1px solid #E0E0E0": undefined };
+border: ${props => props.disabled ? "none": undefined };
+background:  ${props => props.disabled ? "#F2F2F2": "transparent" };
+cursor:  ${props => props.disabled ? "not-allowed": undefined };
 border-radius: 8px;
 outline: none;
 :hover {
-    border: 1px solid #333333; 
+    border: ${props => props.disabled ? "none": "1px solid #333333" };
+
 }
 :focus {
     border: ${props => props.default ? "1px solid #2962FF": undefined };

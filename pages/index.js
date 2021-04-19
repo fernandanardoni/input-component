@@ -2,6 +2,8 @@ import Input from '../components/input';
 
 
 
+
+
 export default function Home() {
   return (
     <div>
@@ -10,6 +12,12 @@ export default function Home() {
       <Input default placeholder="Default"/>
 
       <Input error placeholder="Error"/>
+
+      <Input disabled={true} placeholder="Disabled"/>
+
+      
+
+      
     </div>
   )
 }
