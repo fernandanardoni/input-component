@@ -1,5 +1,5 @@
 import Input from '../components/input';
-import InputError from '../components/input-error';
+
 
 
 export default function Home() {
@@ -7,9 +7,9 @@ export default function Home() {
     <div>
       <h1 className="title">Inputs</h1>  
 
-      <Input/>
-      
-      <InputError/>
+      <Input default placeholder="Default"/>
+
+      <Input error placeholder="Error"/>
     </div>
   )
 }
