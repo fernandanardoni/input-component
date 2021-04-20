@@ -3,15 +3,21 @@ import styled from 'styled-components';
 
 
 const Input = styled.input`
-width: 200px;
+/* width: 200px; */
+width: ${props => props.fullWidth ? "100%" : "200px"};
 height: 55px;
+height:${props => props.multiLine};
+height:${props => props.size};
 border: ${props => props.default ? "1px solid #828282": undefined };
 border: ${props => props.error ? "1px solid #D32F2F": undefined };
 border: ${props => props.disabled ? "none": undefined };
-background:  ${props => props.disabled ? "#F2F2F2": "transparent" };
-cursor:  ${props => props.disabled ? "not-allowed": undefined };
+background: ${props => props.disabled ? "#F2F2F2": "transparent" };
+cursor: ${props => props.disabled ? "not-allowed": undefined };
 border-radius: 8px;
 outline: none;
+font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+font-size: 16px;
+font-weight: 500;
 :hover {
     border: ${props => props.disabled ? "none": "1px solid #333333" };
 
